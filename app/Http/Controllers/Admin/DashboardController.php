@@ -10,14 +10,8 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // return intertia();
-        return Inertia::render('Admin/Dashboard', [
-            // 'event' => $event->only(
-            //     'id',
-            //     'title',
-            //     'start_date',
-            //     'description'
-            // ),
+        return inertia('Admin/Dashboard', [
+            'message' => 'Message from controller',
         ]);
     }
 }
