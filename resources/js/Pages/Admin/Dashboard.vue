@@ -1,4 +1,5 @@
 <template>
+  <h2>Page</h2>
   <dir>
     {{ message }}
   </dir>

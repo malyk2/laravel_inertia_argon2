@@ -13,6 +13,14 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .vue()
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+    .webpackConfig({
+      resolve: {
+        alias: {
+          '@': __dirname + '/resources/js',
+        },
+      }
+    })
+    .sass('resources/scss/argon-dashboard.scss', 'public/css/app.css');
+    // .postCss('resources/css/app.css', 'public/css', [
+    //     //
+    // ]);
