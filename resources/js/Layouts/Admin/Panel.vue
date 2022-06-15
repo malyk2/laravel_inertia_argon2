@@ -11,8 +11,6 @@
     ]"
     v-if="this.$store.state.theme.showSidenav"
   />
-  <!-- <span><b>{{ this.$store.state.theme.mcolor }}</b></span> -->
-  <!-- <p>{{ this.$store.state.theme.mcolor }}</p> -->
   <main
     class="main-content position-relative max-height-vh-100 h-100 border-radius-lg"
   >
