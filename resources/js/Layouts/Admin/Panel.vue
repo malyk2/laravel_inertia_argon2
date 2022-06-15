@@ -1,9 +1,9 @@
 
 <template>
-  <!-- <div
+  <div
     v-show="this.$store.state.theme.layout === 'landing'"
     class="landing-bg h-100 bg-gradient-primary position-fixed w-100"
-  ></div> -->
+  ></div>
   <sidenav
     :custom_class="this.$store.state.theme.mcolor"
     :class="[
@@ -12,28 +12,27 @@
     ]"
     v-if="this.$store.state.theme.showSidenav"
   />
-  <!-- <h1>Sidenav</h1> -->
   <main
     class="main-content position-relative max-height-vh-100 h-100 border-radius-lg"
   >
     <!-- nav -->
-    <!-- <navbar
+    <navbar
       :class="[navClasses]"
       :textWhite="
         this.$store.state.theme.isAbsolute ? 'text-white opacity-8' : 'text-white'
       "
       :minNav="navbarMinimize"
       v-if="this.$store.state.theme.showNavbar"
-    /> -->
+    />
     <slot/>
-    <!-- <app-footer v-show="this.$store.state.theme.showFooter" />
+    <app-footer v-show="this.$store.state.theme.showFooter" />
     <configurator
       :toggle="toggleConfigurator"
       :class="[
         this.$store.state.theme.showConfig ? 'show' : '',
         this.$store.state.theme.hideConfigButton ? 'd-none' : ''
       ]"
-    /> -->
+    />
   </main>
 </template>
 <script>
