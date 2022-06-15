@@ -4,6 +4,7 @@
     class="min-height-300 position-absolute w-100"
     :class="`${this.$store.state.theme.darkMode ? 'bg-transparent' : 'bg-success'}`"
   />
+
   <aside
     class="my-3 overflow-auto border-0 sidenav navbar navbar-vertical navbar-expand-xs border-radius-xl"
     :class="`${
@@ -39,7 +40,7 @@
       </router-link>
     </div>
     <hr class="mt-0 horizontal dark" />
-    <sidenav-list :cardBg="custom_class" />
+    <sidenav-list />
   </aside>
 </template>
 <script>
@@ -58,6 +59,6 @@ export default {
       logoWhite
     };
   },
-  props: ["custom_class", "layout"]
+  props: ["layout"]
 };
 </script>

@@ -213,8 +213,8 @@ export default {
     this.minNav;
   },
   methods: {
-    ...mapMutations(["navbarMinimize", "toggleConfigurator"]),
-    ...mapActions(["toggleSidebarColor"]),
+    ...mapMutations('theme', ["navbarMinimize", "toggleConfigurator"]),
+    ...mapActions('theme', ["toggleSidebarColor"]),
 
     toggleSidebar() {
       this.toggleSidebarColor("bg-white");

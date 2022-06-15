@@ -116,7 +116,7 @@
   </div>
   <div class="pt-3 mx-3 mt-3 sidenav-footer">
     <sidenav-card
-      :class="cardBg"
+      :class="this.$store.state.theme.mcolor"
       textPrimary="Need Help?"
       textSecondary="Please check our docs"
     />
@@ -128,9 +128,7 @@ import SidenavCard from "./SidenavCard.vue";
 
 export default {
   name: "SidenavList",
-  props: {
-    cardBg: String
-  },
+  props: {},
   data() {
     return {
       title: "Argon Dashboard 2",

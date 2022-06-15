@@ -5,13 +5,14 @@
     class="landing-bg h-100 bg-gradient-primary position-fixed w-100"
   ></div>
   <sidenav
-    :custom_class="this.$store.state.theme.mcolor"
     :class="[
       this.$store.state.theme.isTransparent,
       this.$store.state.theme.isRTL ? 'fixed-end' : 'fixed-start'
     ]"
     v-if="this.$store.state.theme.showSidenav"
   />
+  <!-- <span><b>{{ this.$store.state.theme.mcolor }}</b></span> -->
+  <!-- <p>{{ this.$store.state.theme.mcolor }}</p> -->
   <main
     class="main-content position-relative max-height-vh-100 h-100 border-radius-lg"
   >
@@ -37,24 +38,22 @@
 </template>
 <script>
 import Sidenav from "@/Components/Admin/Sidenav";
-// import SidenavCard from "@/Components/Admin/Sidenav/SidenavCard.vue"
-// import Configurator from "@/examples/Configurator.vue";
+import Configurator from "@/Components/Admin/Configurator.vue";
 import Navbar from "@/Components/Admin/Navbars/Navbar.vue";
 import AppFooter from "@/Components/Admin/Footer.vue";
-// import { mapMutations } from "vuex";
+import { mapMutations } from "vuex";
 
 export default {
   name: "LayoutsAdminPanel",
   components: {
     Sidenav,
-    // SidenavCard,
-    // Configurator,
+    Configurator,
     Navbar,
     AppFooter
   },
-  // methods: {
-  //   ...mapMutations(["toggleConfigurator", "navbarMinimize"])
-  // },
+  methods: {
+    ...mapMutations('theme', ["toggleConfigurator", "navbarMinimize"]),
+  },
   computed: {
     navClasses() {
       return {
@@ -68,8 +67,8 @@ export default {
       };
     }
   },
-  // beforeMount() {
-  //   this.$store.state.theme.isTransparent = "bg-transparent";
-  // }
+  beforeMount() {
+    this.$store.state.theme.isTransparent = "bg-transparent";
+  }
 };
 </script>

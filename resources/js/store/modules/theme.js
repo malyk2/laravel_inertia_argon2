@@ -22,7 +22,11 @@ const getters = {};
 const actions = {
   toggleSidebarColor({ commit }, payload) {
     commit("sidebarType", payload);
-  }
+  },
+  setSidebarColor({ commit }, color) {
+    commit("sidebarColor", color);
+  },
+
 };
 const mutations = {
   toggleConfigurator(state) {
@@ -43,6 +47,9 @@ const mutations = {
   },
   sidebarType(state, payload) {
     state.sidebarType = payload;
+  },
+  sidebarColor(state, color) {
+    state.mcolor = color;
   },
   navbarFixed(state) {
     if (state.isNavFixed === false) {

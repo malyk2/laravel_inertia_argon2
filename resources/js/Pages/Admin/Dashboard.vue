@@ -1,8 +1,8 @@
 <template>
   <h2>Page</h2>
-  <dir>
+  <div>
     {{ message }}
-  </dir>
+  </div>
 </template>
 
 <script>
