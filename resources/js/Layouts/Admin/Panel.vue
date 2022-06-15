@@ -39,8 +39,8 @@
 import Sidenav from "@/Components/Admin/Sidenav";
 // import SidenavCard from "@/Components/Admin/Sidenav/SidenavCard.vue"
 // import Configurator from "@/examples/Configurator.vue";
-// import Navbar from "@/examples/Navbars/Navbar.vue";
-// import AppFooter from "@/examples/Footer.vue";
+import Navbar from "@/Components/Admin/Navbars/Navbar.vue";
+import AppFooter from "@/Components/Admin/Footer.vue";
 // import { mapMutations } from "vuex";
 
 export default {
@@ -49,8 +49,8 @@ export default {
     Sidenav,
     // SidenavCard,
     // Configurator,
-    // Navbar,
-    // AppFooter
+    Navbar,
+    AppFooter
   },
   // methods: {
   //   ...mapMutations(["toggleConfigurator", "navbarMinimize"])
