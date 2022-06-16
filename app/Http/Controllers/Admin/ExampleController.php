@@ -27,4 +27,9 @@ class ExampleController extends Controller
     {
         return inertia('Admin/Vr');
     }
+
+    public function rtl()
+    {
+        return inertia('Admin/Rtl');
+    }
 }

@@ -45,7 +45,7 @@
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/rtl-page" :class="getRoute() === 'rtl-page' ? 'active' : ''" navText="RTL">
+        <sidenav-item url="/admin/example/rtl" :class="{ 'active': $page.url === '/admin/example/rtl' }" navText="RTL">
           <template v-slot:icon>
             <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
           </template>

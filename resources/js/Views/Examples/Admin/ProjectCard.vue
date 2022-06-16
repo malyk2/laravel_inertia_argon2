@@ -64,7 +64,7 @@
                 <div class="d-flex py-1">
                   <div>
                     <img
-                      src="../../assets/img/small-logos/logo-xd.svg"
+                      src="@/assets/img/small-logos/logo-xd.svg"
                       class="avatar avatar-sm me-3"
                       alt="xd"
                     />
@@ -84,7 +84,7 @@
                     title
                     data-bs-original-title="Ryan Tompson"
                   >
-                    <img src="../../assets/img/team-1.jpg" alt="team1" />
+                    <img src="@/assets/img/team-1.jpg" alt="team1" />
                   </a>
                   <a
                     href="javascript:;"
@@ -94,7 +94,7 @@
                     title
                     data-bs-original-title="Romina Hadid"
                   >
-                    <img src="../../assets/img/team-2.jpg" alt="team2" />
+                    <img src="@/assets/img/team-2.jpg" alt="team2" />
                   </a>
                   <a
                     href="javascript:;"
@@ -104,7 +104,7 @@
                     title
                     data-bs-original-title="Alexander Smith"
                   >
-                    <img src="../../assets/img/team-3.jpg" alt="team3" />
+                    <img src="@/assets/img/team-3.jpg" alt="team3" />
                   </a>
                   <a
                     href="javascript:;"
@@ -114,7 +114,7 @@
                     title
                     data-bs-original-title="Jessica Doe"
                   >
-                    <img src="../../assets/img/team-4.jpg" alt="team4" />
+                    <img src="@/assets/img/team-4.jpg" alt="team4" />
                   </a>
                 </div>
               </td>
@@ -145,7 +145,7 @@
                 <div class="d-flex py-1">
                   <div>
                     <img
-                      src="../../assets/img/small-logos/logo-atlassian.svg"
+                      src="@/assets/img/small-logos/logo-atlassian.svg"
                       class="avatar avatar-sm me-3"
                       alt="atlassian"
                     />
@@ -165,7 +165,7 @@
                     title
                     data-bs-original-title="Romina Hadid"
                   >
-                    <img src="../../assets/img/team-2.jpg" alt="team5" />
+                    <img src="@/assets/img/team-2.jpg" alt="team5" />
                   </a>
                   <a
                     href="javascript:;"
@@ -175,7 +175,7 @@
                     title
                     data-bs-original-title="Jessica Doe"
                   >
-                    <img src="../../assets/img/team-4.jpg" alt="team6" />
+                    <img src="@/assets/img/team-4.jpg" alt="team6" />
                   </a>
                 </div>
               </td>
@@ -206,7 +206,7 @@
                 <div class="d-flex py-1">
                   <div>
                     <img
-                      src="../../assets/img/small-logos/logo-slack.svg"
+                      src="@/assets/img/small-logos/logo-slack.svg"
                       class="avatar avatar-sm me-3"
                       alt="team7"
                     />
@@ -226,7 +226,7 @@
                     title
                     data-bs-original-title="Romina Hadid"
                   >
-                    <img src="../../assets/img/team-3.jpg" alt="team8" />
+                    <img src="@/assets/img/team-3.jpg" alt="team8" />
                   </a>
                   <a
                     href="javascript:;"
@@ -236,7 +236,7 @@
                     title
                     data-bs-original-title="Jessica Doe"
                   >
-                    <img src="../../assets/img/team-1.jpg" alt="team9" />
+                    <img src="@/assets/img/team-1.jpg" alt="team9" />
                   </a>
                 </div>
               </td>
@@ -267,7 +267,7 @@
                 <div class="d-flex py-1">
                   <div>
                     <img
-                      src="../../assets/img/small-logos/logo-spotify.svg"
+                      src="@/assets/img/small-logos/logo-spotify.svg"
                       class="avatar avatar-sm me-3"
                       alt="spotify"
                     />
@@ -287,7 +287,7 @@
                     title
                     data-bs-original-title="Ryan Tompson"
                   >
-                    <img src="../../assets/img/team-4.jpg" alt="user1" />
+                    <img src="@/assets/img/team-4.jpg" alt="user1" />
                   </a>
                   <a
                     href="javascript:;"
@@ -297,7 +297,7 @@
                     title
                     data-bs-original-title="Romina Hadid"
                   >
-                    <img src="../../assets/img/team-3.jpg" alt="user2" />
+                    <img src="@/assets/img/team-3.jpg" alt="user2" />
                   </a>
                   <a
                     href="javascript:;"
@@ -307,7 +307,7 @@
                     title
                     data-bs-original-title="Alexander Smith"
                   >
-                    <img src="../../assets/img/team-4.jpg" alt="user3" />
+                    <img src="@/assets/img/team-4.jpg" alt="user3" />
                   </a>
                   <a
                     href="javascript:;"
@@ -317,7 +317,7 @@
                     title
                     data-bs-original-title="Jessica Doe"
                   >
-                    <img src="../../assets/img/team-1.jpg" alt="user4" />
+                    <img src="@/assets/img/team-1.jpg" alt="user4" />
                   </a>
                 </div>
               </td>
@@ -348,7 +348,7 @@
                 <div class="d-flex py-1">
                   <div>
                     <img
-                      src="../../assets/img/small-logos/logo-jira.svg"
+                      src="@/assets/img/small-logos/logo-jira.svg"
                       class="avatar avatar-sm me-3"
                       alt="jira"
                     />
@@ -368,7 +368,7 @@
                     title
                     data-bs-original-title="Ryan Tompson"
                   >
-                    <img src="../../assets/img/team-4.jpg" alt="user5" />
+                    <img src="@/assets/img/team-4.jpg" alt="user5" />
                   </a>
                 </div>
               </td>
@@ -399,7 +399,7 @@
                 <div class="d-flex py-1">
                   <div>
                     <img
-                      src="../../assets/img/small-logos/logo-invision.svg"
+                      src="@/assets/img/small-logos/logo-invision.svg"
                       class="avatar avatar-sm me-3"
                       alt="invision"
                     />
@@ -419,7 +419,7 @@
                     title
                     data-bs-original-title="Ryan Tompson"
                   >
-                    <img src="../../assets/img/team-1.jpg" alt="user6" />
+                    <img src="@/assets/img/team-1.jpg" alt="user6" />
                   </a>
                   <a
                     href="javascript:;"
@@ -429,7 +429,7 @@
                     title
                     data-bs-original-title="Jessica Doe"
                   >
-                    <img src="../../assets/img/team-4.jpg" alt="user7" />
+                    <img src="@/assets/img/team-4.jpg" alt="user7" />
                   </a>
                 </div>
               </td>
