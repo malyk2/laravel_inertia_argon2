@@ -25,7 +25,7 @@
         aria-hidden="true"
         id="iconSidenav"
       ></i>
-      <router-link class="m-0 navbar-brand" to="/">
+      <Link href="/admin/example/dashboard" class="m-0 navbar-brand" v-bind="$attrs">
         <img
           :src="
             this.$store.state.theme.darkMode ||
@@ -37,7 +37,7 @@
           alt="main_logo"
         />
         <span class="ms-2 font-weight-bold me-2">Argon Dashboard 2</span>
-      </router-link>
+      </Link>
     </div>
     <hr class="mt-0 horizontal dark" />
     <sidenav-list />
@@ -47,11 +47,13 @@
 import SidenavList from "./SidenavList.vue";
 import logo from "@/assets/img/logo-ct-dark.png";
 import logoWhite from "@/assets/img/logo-ct.png";
+import { Link } from '@inertiajs/inertia-vue3'
 
 export default {
   name: "index",
   components: {
-    SidenavList
+    SidenavList,
+    Link,
   },
   data() {
     return {
