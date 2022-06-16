@@ -236,6 +236,6 @@
 
 <script>
 export default {
-  name: "projects-table"
+  name: "ViewsExamplesAdminProjectsTable"
 }
 </script>

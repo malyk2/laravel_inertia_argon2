@@ -28,7 +28,7 @@
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/billing" :class="getRoute() === 'billing' ? 'active' : ''"
+        <sidenav-item url="/admin/example/billing" :class="{ 'active': $page.url === '/admin/example/billing' }"
           :navText="this.$store.state.theme.isRTL ? 'الفواتیر' : 'Billing'">
           <template v-slot:icon>
             <i class="ni ni-credit-card text-success text-sm opacity-10"></i>

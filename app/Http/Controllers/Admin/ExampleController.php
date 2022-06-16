@@ -12,4 +12,9 @@ class ExampleController extends Controller
     {
         return inertia('Admin/Tables');
     }
+
+    public function billing()
+    {
+        return inertia('Admin/Billing');
+    }
 }
