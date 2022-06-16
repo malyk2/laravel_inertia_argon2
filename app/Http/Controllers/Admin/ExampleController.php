@@ -8,6 +8,11 @@ use Inertia\Inertia;
 
 class ExampleController extends Controller
 {
+    public function dashboard()
+    {
+        return inertia('Admin/Dashboard');
+    }
+
     public function tables()
     {
         return inertia('Admin/Tables');

@@ -12,7 +12,7 @@
         </h6>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/dashboard-default" :class="getRoute() === 'dashboard-default' ? 'active' : ''"
+        <sidenav-item url="/admin/example/dashboard" :class="{ 'active': $page.url === '/admin/example/dashboard' }"
           :navText="this.$store.state.theme.isRTL ? 'لوحة القيادة' : 'Dashboard'">
           <template v-slot:icon>
             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>

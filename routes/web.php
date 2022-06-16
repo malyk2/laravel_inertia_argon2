@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::prefix('example')->group(function () {
+        Route::get('dashboard', [ExampleController::class, 'dashboard'])->name('examples.dashboard');
         Route::get('tables', [ExampleController::class, 'tables'])->name('examples.tables');
         Route::get('billing', [ExampleController::class, 'billing'])->name('examples.billing');
     });
