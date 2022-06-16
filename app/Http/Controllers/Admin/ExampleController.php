@@ -37,4 +37,14 @@ class ExampleController extends Controller
     {
         return inertia('Admin/Profile');
     }
+
+    public function signin()
+    {
+        return inertia('Admin/Signin');
+    }
+
+    public function signup()
+    {
+        return inertia('Admin/Signup');
+    }
 }

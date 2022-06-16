@@ -28,5 +28,7 @@ Route::prefix('admin')->group(function () {
         Route::get('vr', [ExampleController::class, 'vr'])->name('examples.vr');
         Route::get('rtl', [ExampleController::class, 'rtl'])->name('examples.rtl');
         Route::get('profile', [ExampleController::class, 'profile'])->name('examples.profile');
+        Route::get('signin', [ExampleController::class, 'signin'])->name('examples.signin');
+        Route::get('signup', [ExampleController::class, 'signup'])->name('examples.signup');
     });
 });

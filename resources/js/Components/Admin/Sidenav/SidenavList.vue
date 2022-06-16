@@ -70,7 +70,7 @@
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/signin" :class="getRoute() === 'signin' ? 'active' : ''"
+        <sidenav-item url="/admin/example/signin" :class="{ 'active': $page.url === '/admin/example/signin' }"
           :navText="this.$store.state.theme.isRTL ? 'تسجيل الدخول' : 'Sign In'">
           <template v-slot:icon>
             <i class="ni ni-single-copy-04 text-danger text-sm opacity-10"></i>
@@ -78,7 +78,7 @@
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/signup" :class="getRoute() === 'signup' ? 'active' : ''"
+        <sidenav-item url="/admin/example/signup" :class="{ 'active': $page.url === '/admin/example/signup' }"
           :navText="this.$store.state.theme.isRTL ? 'اشتراك' : 'Sign Up'">
           <template v-slot:icon>
             <i class="ni ni-collection text-info text-sm opacity-10"></i>
