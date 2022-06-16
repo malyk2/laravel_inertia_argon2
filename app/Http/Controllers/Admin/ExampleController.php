@@ -22,4 +22,9 @@ class ExampleController extends Controller
     {
         return inertia('Admin/Billing');
     }
+
+    public function vr()
+    {
+        return inertia('Admin/Vr');
+    }
 }

@@ -36,7 +36,7 @@
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/virtual-reality" :class="getRoute() === 'virtual-reality' ? 'active' : ''" :navText="
+        <sidenav-item url="/admin/example/vr" :class="{ 'active': $page.url === '/admin/example/vr' }" :navText="
           this.$store.state.theme.isRTL ? 'الواقع الافتراضي' : 'Virtual Reality'
         ">
           <template v-slot:icon>
