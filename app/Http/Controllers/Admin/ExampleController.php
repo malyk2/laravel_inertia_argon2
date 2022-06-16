@@ -32,4 +32,9 @@ class ExampleController extends Controller
     {
         return inertia('Admin/Rtl');
     }
+
+    public function profile()
+    {
+        return inertia('Admin/Profile');
+    }
 }

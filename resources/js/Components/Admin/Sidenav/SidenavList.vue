@@ -62,7 +62,7 @@
         </h6>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/profile" :class="getRoute() === 'profile' ? 'active' : ''"
+        <sidenav-item url="/admin/example/profile" :class="{ 'active': $page.url === '/admin/example/profile' }"
           :navText="this.$store.state.theme.isRTL ? 'حساب تعريفي' : 'Profile'">
           <template v-slot:icon>
             <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>

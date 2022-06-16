@@ -27,5 +27,6 @@ Route::prefix('admin')->group(function () {
         Route::get('billing', [ExampleController::class, 'billing'])->name('examples.billing');
         Route::get('vr', [ExampleController::class, 'vr'])->name('examples.vr');
         Route::get('rtl', [ExampleController::class, 'rtl'])->name('examples.rtl');
+        Route::get('profile', [ExampleController::class, 'profile'])->name('examples.profile');
     });
 });
