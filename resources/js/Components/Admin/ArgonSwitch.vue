@@ -1,6 +1,7 @@
 <template>
   <div class="form-check form-switch">
-    <input class="form-check-input" :class="inputClass" type="checkbox" :name="name" :id="id" :checked="checked" />
+    <input class="form-check-input" :class="inputClass" type="checkbox" :name="name" :id="id" :checked="checked"
+      @change="$emit('update:checked', $event.target.checked)" />
     <label class="form-check-label" :class="labelClass" :for="id">
       <slot />
     </label>

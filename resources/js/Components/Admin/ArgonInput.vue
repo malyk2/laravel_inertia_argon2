@@ -6,14 +6,18 @@
       </span>
       <input
         :type="type"
-        class="form-control"
-        :class="getClasses(size, valid)"
+        class="form-control "
+        :class="getClasses()"
         :name="name"
         :id="id"
-        :value="value"
+        :value="modelValue"
         :placeholder="placeholder"
         :isRequired="isRequired"
+        @input="$emit('update:modelValue', $event.target.value)"
       />
+      <div class="invalid-feedback" v-if="showError && errorText">
+        {{ errorText }}
+      </div>
       <span v-if="iconDir === 'right'" class="input-group-text">
         <i :class="getIcon(icon)"></i>
       </span>
@@ -25,6 +29,7 @@
 export default {
   name: "argon-input",
   props: {
+    modelValue: String,
     size: {
       type: String,
       default: "default",
@@ -33,22 +38,30 @@ export default {
       type: Boolean,
       default: false,
     },
+    showError: {
+      type: Boolean,
+      default: true,
+    },
+    errorText: String,
     icon: String,
     iconDir: String,
     name: String,
     id: String,
-    value: String,
     placeholder: String,
     type: String,
     isRequired: Boolean,
   },
   methods: {
-    getClasses: (size, valid) => {
+    getClasses() {
+      console.log('getClasses');
+      console.log(this.size);
       let sizeValue, isValidValue;
 
-      sizeValue = size ? `form-control-${size}` : null;
+      sizeValue = this.size ? `form-control-${this.size}` : null;
 
-      isValidValue = valid ? `${valid}` : "invalid";
+      if (!this.valid && this.showError && this.errorText) {
+        isValidValue = 'is-invalid'
+      }
 
       return `${sizeValue} ${isValidValue}`;
     },
