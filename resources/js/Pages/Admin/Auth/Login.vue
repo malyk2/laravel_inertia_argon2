@@ -72,9 +72,7 @@ import Navbar from "@/Components/Admin/Navbars/Navbar.vue";
 import ArgonInput from "@/Components/Admin/ArgonInput.vue";
 import ArgonSwitch from "@/Components/Admin/ArgonSwitch.vue";
 import ArgonButton from "@/Components/Admin/ArgonButton.vue";
-import { Inertia } from '@inertiajs/inertia'
 import { useForm } from '@inertiajs/inertia-vue3'
-// const body = document.getElementsByTagName("body")[0];
 
 export default {
   name: "PagesAdminAuthLogin",
@@ -90,7 +88,7 @@ export default {
       form: useForm({
         email: null,
         password: null,
-        remember_me: true,
+        remember_me: false,
       })
     }
   },
@@ -98,23 +96,8 @@ export default {
     submit() {
       console.log('submit');
       console.log(this.form);
-      // Inertia.post('/admin/login', this.form)
       this.form.post('/admin/login')
     }
-  },
-  created() {
-    // this.$store.state.theme.hideConfigButton = true;
-    // this.$store.state.theme.showNavbar = false;
-    // this.$store.state.theme.showSidenav = false;
-    // this.$store.state.theme.showFooter = false;
-    // body.classList.remove("bg-gray-100");
-  },
-  beforeUnmount() {
-    // this.$store.state.theme.hideConfigButton = false;
-    // this.$store.state.theme.showNavbar = true;
-    // this.$store.state.theme.showSidenav = true;
-    // this.$store.state.theme.showFooter = true;
-    // body.classList.add("bg-gray-100");
   },
 };
 </script>
