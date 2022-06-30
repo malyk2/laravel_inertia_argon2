@@ -20,11 +20,10 @@
         </div>
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item d-flex align-items-center">
-            <Link href="/admin/example/signin" class="px-0 nav-link font-weight-bold text-white" target="_blank"
-              v-bind="$attrs">
-              <i class="fa fa-user" :class="this.$store.state.theme.isRTL ? 'ms-sm-2' : 'me-sm-2'"></i>
-              <span v-if="this.$store.state.theme.isRTL" class="d-sm-inline d-none">يسجل دخول</span>
-              <span v-else class="d-sm-inline d-none">Sign In</span>
+            <Link href="/admin/logout" method="post" class="px-0 nav-link font-weight-bold text-white" v-bind="$attrs">
+            <i class="fa fa-user" :class="this.$store.state.theme.isRTL ? 'ms-sm-2' : 'me-sm-2'"></i>
+            <span v-if="this.$store.state.theme.isRTL" class="d-sm-inline d-none">يسجل دخول</span>
+            <span v-else class="d-sm-inline d-none">Logout</span>
             </Link>
           </li>
           <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
