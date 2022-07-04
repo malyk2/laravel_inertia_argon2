@@ -37,17 +37,9 @@ abstract class DuskTestCase extends BaseTestCase
             return $items->merge([
                 '--disable-gpu',
                 '--headless',
-                // '--disable-gpu',
-                // '--headless',
-                // '--no-sandbox',
-                // '--ignore-ssl-errors',
-                // '--whitelisted-ips=""',
-                // '--verbose',
-                // '--allowed-ips="172.25.0.4"',
             ]);
         })->all());
 
-        // dd($_ENV['DUSK_DRIVER_URL'] ?? 'http://localhost:9515', );
         return RemoteWebDriver::create(
             $_ENV['DUSK_DRIVER_URL'] ?? 'http://localhost:9515',
             DesiredCapabilities::chrome()->setCapability(
