@@ -20,5 +20,9 @@ class LoginTest extends DuskTestCase
             $browser->visit('/admin/login')
                     ->assertSee('Sign In');
         });
+        // $this->browse(function (Browser $browser) {
+        //     $browser->visit('http://app:80/')
+        //             ->assertSee('Welcome');
+        // });
     }
 }
