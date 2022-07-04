@@ -16,9 +16,7 @@ services:
         links:
             - database
             - mailhog
-            # - selenium
-        # networks:
-        #     - laravel-inertia
+            - selenium
     database:
         image: postgres:14-alpine
         environment:
@@ -28,48 +26,13 @@ services:
             - "54321:5432"
         volumes:
             - argon_pgdata:/var/lib/postgresql/data/
-        # networks:
-        #     - laravel-inertia
     selenium:
-      image: selenium/hub:3.12.0-americium
-      ports:
-        - "4444:4444"
-    chrome:
-        image: selenium/node-chrome:3.12.0-americium
-        depends_on:
-        - selenium
-        environment:
-        - HUB_HOST=selenium
-        - HUB_PORT=4444
-    # selenium:
-    #     image: 'selenium/standalone-chrome'
-    #     volumes:
-    #         - '/dev/shm:/dev/shm'
-    #     # depends_on:
-    #     #     - app
-    #     # links:
-    #     #     - app
-    #     ports:
-    #         - "8080:4444"
-    #     expose:
-    #         - 4444
-
-        # networks:
-        #     - laravel-inertia
-
+        image: 'selenium/standalone-chrome:4.0.0'
+        # ports:
+        #     - "4444:4444"
     mailhog:
         image: mailhog/mailhog
         ports:
             - "8025:8025"
-        # networks:
-        #     - laravel-inertia
 volumes:
     argon_pgdata:
-        # networks:
-        #     default:
-        #         name: laravel-inertia
-        # networks:
-        #   default:
-        #     external:
-        #       name: laravel-inertia
-
