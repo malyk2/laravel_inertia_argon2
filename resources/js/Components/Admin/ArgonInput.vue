@@ -53,8 +53,6 @@ export default {
   },
   methods: {
     getClasses() {
-      console.log('getClasses');
-      console.log(this.size);
       let sizeValue, isValidValue;
 
       sizeValue = this.size ? `form-control-${this.size}` : null;
