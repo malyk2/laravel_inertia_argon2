@@ -11,7 +11,7 @@ export default defineConfig({
   },
   plugins: [
     laravel([
-      'resources/css/app.css',
+      'resources/scss/argon-dashboard.scss',
       'resources/js/app.js',
     ]),
     vue(),

@@ -16,8 +16,10 @@
 <script>
 import AuthorsTable from "@/Views/Examples/Admin/AuthorsTable.vue";
 import ProjectsTable from "@/Views/Examples/Admin/ProjectsTable.vue";
+import Panel from '@/Layouts/Admin/Panel.vue'
 export default {
   name: 'PagesAdminTables',
+  layout: Panel,
   components: {
     AuthorsTable,
     ProjectsTable,
