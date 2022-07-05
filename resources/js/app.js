@@ -7,7 +7,7 @@ import Panel from './Layouts/Admin/Panel.vue'
 createInertiaApp({
   resolve: name => {
     // const page = require(`./Pages/${name}`).default;
-    const page = resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')).default;
+    const page = resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue'));
     if (page.layout === undefined) {
       page.layout = Panel
     }

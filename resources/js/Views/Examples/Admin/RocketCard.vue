@@ -1,9 +1,9 @@
 <template>
   <div class="card h-100 p-3">
-    <div
+    <!-- <div
       class="overflow-hidden position-relative border-radius-lg bg-cover h-100"
       :style="{backgroundImage: 'url(' + require('@/assets/img/ivancik.jpg') + ')'}"
-    >
+    > -->
       <span class="mask bg-gradient-dark"></span>
       <div class="card-body position-relative z-index-1 p-3 h-100">
         <div class="d-flex flex-column h-100">
@@ -19,7 +19,7 @@
             <i class="fas fa-arrow-left text-sm ms-1" aria-hidden="true"></i>
           </a>
         </div>
-      </div>
+      <!-- </div> -->
     </div>
   </div>
 </template>

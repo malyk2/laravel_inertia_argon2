@@ -50,7 +50,7 @@ import logoWhite from "@/assets/img/logo-ct.png";
 import { Link } from '@inertiajs/inertia-vue3'
 
 export default {
-  name: "index",
+  name: "Sidenav",
   components: {
     SidenavList,
     Link,
