@@ -124,9 +124,11 @@ import ActiveUsersChart from "@/Views/Examples/Admin/Charts/ActiveUsersChart.vue
 import GradientLineChart from "@/Views/Examples/Admin/Charts/GradientLineChart.vue";
 import OrdersCard from "@/Views/Examples/Admin/OrdersCard.vue";
 import ProjectCard from "@/Views/Examples/Admin/ProjectCard.vue";
+import Panel from '@/Layouts/Admin/Panel.vue'
 
 export default {
   name: "rtl-page",
+  layout: Panel,
   components: {
     Card,
     DeveloperCard,

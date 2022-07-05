@@ -95,6 +95,7 @@ import Card from "@/Views/Examples/Admin/Cards/Card.vue";
 import GradientLineChart from "@/Views/Examples/Admin/Charts/GradientLineChart.vue";
 import Carousel from "@/Views/Examples/Admin/Carousel.vue";
 import CategoriesCard from "@/Views/Examples/Admin/CategoriesCard.vue";
+import Panel from '@/Layouts/Admin/Panel.vue'
 
 import US from "@/assets/img/icons/flags/US.png";
 import DE from "@/assets/img/icons/flags/DE.png";
@@ -103,6 +104,7 @@ import BR from "@/assets/img/icons/flags/BR.png";
 
 export default {
   name: "dashboard-default",
+  layout: Panel,
   data() {
     return {
       stats: {
