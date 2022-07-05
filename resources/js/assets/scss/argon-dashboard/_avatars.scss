@@ -85,7 +85,7 @@
 	font-size: $font-size-sm;
 
   &.avatar-raised {
-    margin-top: -($avatar-sm-height / 2);
+    margin-top: -(calc($avatar-sm-height / 2));
   }
 }
 
@@ -95,7 +95,7 @@
 	font-size: $font-size-xs;
 
   &.avatar-raised {
-    margin-top: -($avatar-xs-height / 2);
+    margin-top: -(calc($avatar-xs-height / 2));
   }
 }
 
