@@ -38,6 +38,7 @@
 import Sidenav from "@/Components/Admin/Sidenav";
 import Configurator from "@/Components/Admin/Configurator.vue";
 import Navbar from "@/Components/Admin/Navbars/Navbar.vue";
+import NavbarNotification from "@/Components/Admin/Navbars/NavbarNotification.vue";
 import AppFooter from "@/Components/Admin/Footer.vue";
 import { mapMutations } from "vuex";
 
@@ -47,6 +48,7 @@ export default {
     Sidenav,
     Configurator,
     Navbar,
+    NavbarNotification,
     AppFooter
   },
   methods: {

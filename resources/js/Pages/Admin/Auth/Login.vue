@@ -32,7 +32,9 @@
                 <div class="px-1 pt-0 text-center card-footer px-lg-2">
                   <p class="mx-auto mb-4 text-sm">
                     Don't have an account?
-                    <a href="javascript:;" class="text-success text-gradient font-weight-bold">Sign up</a>
+                    <Link href="/admin/register" class="text-success text-gradient font-weight-bold" v-bind="$attrs">
+                      Sign up
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -48,6 +50,7 @@
                 <p class="text-white position-relative">The more effortless the writing looks, the more effort the
                   writer actually put into the process.</p>
               </div>
+
             </div>
           </div>
         </div>
@@ -61,7 +64,7 @@ import Navbar from "@/Components/Admin/Navbars/Navbar.vue";
 import ArgonInput from "@/Components/Admin/ArgonInput.vue";
 import ArgonSwitch from "@/Components/Admin/ArgonSwitch.vue";
 import ArgonButton from "@/Components/Admin/ArgonButton.vue";
-import { useForm } from '@inertiajs/inertia-vue3'
+import { useForm, Link } from '@inertiajs/inertia-vue3'
 
 export default {
   name: "PagesAdminAuthLogin",
@@ -71,6 +74,7 @@ export default {
     ArgonInput,
     ArgonSwitch,
     ArgonButton,
+    Link,
   },
   data() {
     return {
@@ -83,8 +87,6 @@ export default {
   },
   methods: {
     submit() {
-      console.log('submit');
-      console.log(this.form);
       this.form.post('/admin/login')
     }
   },

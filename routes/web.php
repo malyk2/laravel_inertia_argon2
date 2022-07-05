@@ -37,4 +37,6 @@ Route::prefix('admin')->group(function () {
     // Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('login', [AuthController::class, 'loginForm'])->name('login');
     Route::post('login', [AuthController::class, 'login']);
+    Route::get('register', [AuthController::class, 'registerForm'])->name('register.form');
+    Route::post('register', [AuthController::class, 'register']);
 });
