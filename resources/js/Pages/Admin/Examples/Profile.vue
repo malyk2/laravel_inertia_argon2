@@ -180,13 +180,11 @@ import setTooltip from "@/assets/js/tooltip.js";
 import ProfileCard from "@/Views/Examples/Admin/ProfileCard.vue";
 import ArgonInput from "@/Components/Admin/ArgonInput.vue";
 import ArgonButton from "@/Components/Admin/ArgonButton.vue";
-import Panel from '@/Layouts/Admin/Panel.vue'
 
 const body = document.getElementsByTagName("body")[0];
 
 export default {
   name: "profile",
-  layout: Panel,
   data() {
     return {
       showMenu: false
