@@ -1,6 +1,14 @@
 <template>
   <div class="collapse navbar-collapse w-auto h-auto h-100" id="sidenav-collapse-main">
     <ul class="navbar-nav">
+      <li class="nav-item">
+        <sidenav-item url="/admin/users" :class="{ 'active': $page.url === '/admin/example/users' }"
+          :navText="this.$store.state.theme.isRTL ? 'لوحة القيادة' : 'Users'">
+          <template v-slot:icon>
+            <i class="ni ni-circle-08 text-warning text-sm opacity-10"></i>
+          </template>
+        </sidenav-item>
+      </li>
       <li class="mt-3 nav-item">
         <h6 v-if="this.$store.state.theme.isRTL" class="text-xs ps-4 text-uppercase font-weight-bolder opacity-6"
           :class="this.$store.state.theme.isRTL ? 'me-4' : 'ms-2'">

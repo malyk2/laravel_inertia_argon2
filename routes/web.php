@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ExampleController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,9 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function () {
     Route::middleware('auth')->group(function () {
         Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+        Route::prefix('users')->group(function () {
+            Route::get('', [UserController::class, 'index'])->name('users.index');
+        });
         Route::prefix('example')->group(function () {
             Route::get('dashboard', [ExampleController::class, 'dashboard'])->name('examples.dashboard');
             Route::get('tables', [ExampleController::class, 'tables'])->name('examples.tables');
