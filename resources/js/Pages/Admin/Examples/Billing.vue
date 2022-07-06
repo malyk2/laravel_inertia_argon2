@@ -53,9 +53,11 @@ import PaymentCard from "@/Views/Examples/Admin/PaymentCard.vue";
 import InvoiceCard from "@/Views/Examples/Admin/InvoiceCard.vue";
 import BillingCard from "@/Views/Examples/Admin/BillingCard.vue";
 import TransactionCard from "@/Views/Examples/Admin/TransactionCard.vue";
+import Panel from '@/Layouts/Admin/Panel.vue'
 
 export default {
   name: "Billing",
+  layout: Panel,
   components: {
     MasterCard,
     DefaultInfoCard,
