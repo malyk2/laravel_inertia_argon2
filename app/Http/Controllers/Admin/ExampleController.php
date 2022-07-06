@@ -10,41 +10,41 @@ class ExampleController extends Controller
 {
     public function dashboard()
     {
-        return inertia('Admin/Dashboard');
+        return inertia('Admin/Examples/Dashboard');
     }
 
     public function tables()
     {
-        return inertia('Admin/Tables');
+        return inertia('Admin/Examples/Tables');
     }
 
     public function billing()
     {
-        return inertia('Admin/Billing');
+        return inertia('Admin/Examples/Billing');
     }
 
     public function vr()
     {
-        return inertia('Admin/Vr');
+        return inertia('Admin/Examples/Vr');
     }
 
     public function rtl()
     {
-        return inertia('Admin/Rtl');
+        return inertia('Admin/Examples/Rtl');
     }
 
     public function profile()
     {
-        return inertia('Admin/Profile');
+        return inertia('Admin/Examples/Profile');
     }
 
     public function signin()
     {
-        return inertia('Admin/Signin');
+        return inertia('Admin/Examples/Signin');
     }
 
     public function signup()
     {
-        return inertia('Admin/Signup');
+        return inertia('Admin/Examples/Signup');
     }
 }

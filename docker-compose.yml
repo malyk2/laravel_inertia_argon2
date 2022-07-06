@@ -1,34 +1,40 @@
 version: '3.1'
 
 services:
-  app:
-    build:
-      context: docker/local
-      dockerfile: app.docker
-    volumes:
-      - ./:/var/www/html
-      - ./docker/local/apache2log/:/var/log/apache2
-    ports:
-      - "80:80"
-      - "3000:3000"
-    depends_on:
-      - database
-    links:
-      - database
-      - mailhog
-  database:
-    image: postgres:14-alpine
-    environment:
-      - "POSTGRES_PASSWORD=${DB_PASSWORD}"
-      - "POSTGRES_DB=db"
-    ports:
-      - "54321:5432"
-    volumes:
-      - argon_pgdata:/var/lib/postgresql/data/
-
-  mailhog:
-    image: mailhog/mailhog
-    ports:
-      - "8025:8025"
+    app:
+        build:
+            context: docker/local
+            dockerfile: app.docker
+        volumes:
+            - ./:/var/www/html
+            - ./docker/local/apache2log/:/var/log/apache2
+        ports:
+            - "80:80"
+            - "3000:3000"
+        depends_on:
+            - database
+        links:
+            - database
+            - mailhog
+            - selenium
+    database:
+        image: postgres:14-alpine
+        environment:
+            - "POSTGRES_PASSWORD=${DB_PASSWORD}"
+            - "POSTGRES_DB=db"
+        ports:
+            - "54321:5432"
+        volumes:
+            - argon_pgdata:/var/lib/postgresql/data/
+    selenium:
+        image: 'selenium/standalone-chrome:4.0.0'
+        # ports:
+        #     - "4444:4444"
+        volumes:
+            - '/dev/shm:/dev/shm'
+    mailhog:
+        image: mailhog/mailhog
+        ports:
+            - "8025:8025"
 volumes:
-  argon_pgdata:
+    argon_pgdata:

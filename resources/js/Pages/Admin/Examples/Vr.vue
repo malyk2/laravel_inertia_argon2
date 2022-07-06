@@ -95,7 +95,7 @@
 </template>
 
 <script>
-import Sidenav from "@/Components/Admin/Sidenav";
+import Sidenav from "@/Components/Admin/Sidenav/Sidenav.vue";
 import AppFooter from "@/Components/Admin/Footer.vue";
 import Navbar from "@/Components/Admin/Navbars/Navbar.vue";
 import CardCalendar from "@/Views/Examples/Admin/CardCalendar.vue";
