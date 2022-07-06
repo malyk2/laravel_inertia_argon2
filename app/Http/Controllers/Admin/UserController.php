@@ -21,7 +21,7 @@ class UserController extends Controller
     {
         $users = User::where('id', '<>', auth()->id())
             ->orderBy('created_at', 'desc')
-            ->paginate();
+            ->paginate(3);
 
         return inertia('Admin/Users/Index', [
             'users' => ListItemResource::collection($users),
