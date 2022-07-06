@@ -162,6 +162,7 @@
                   type="text"
                   placeholder="Name"
                   aria-label="Name"
+                  name="name"
                   v-model="form.name"
                   :errorText="form.errors.name"
                 />
@@ -169,6 +170,7 @@
                   type="email"
                   placeholder="Email"
                   aria-label="Email"
+                  name="email"
                   v-model="form.email"
                   :errorText="form.errors.email"
                 />
@@ -176,6 +178,7 @@
                   type="password"
                   placeholder="Password"
                   aria-label="Password"
+                  name="password"
                   v-model="form.password"
                   :errorText="form.errors.password"
                 />
