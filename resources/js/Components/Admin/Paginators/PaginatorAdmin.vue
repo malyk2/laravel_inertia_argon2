@@ -1,10 +1,32 @@
 <template>
   <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
-      <li class="page-item" v-for="page in pagesNumber" :key="page">
+      <li class="page-item" v-if="meta.current_page > 2">
+        <a class="page-link" href="#" @click.prevent="changePage(1)">
+          <i class="fas fa-chevron-left"></i>
+          <i class="fas fa-chevron-left"></i>
+        </a>
+      </li>
+      <li class="page-item" v-if="meta.current_page > 1">
+        <a class="page-link" href="#" @click.prevent="changePage(meta.current_page - 1)">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+      </li>
+      <li class="page-item" :class="{ 'active': page == meta.current_page }" v-for="page in pagesNumber" :key="page">
         <a class="page-link" href="#" @click.prevent="changePage(page)">{{
-          page
+            page
         }}</a>
+      </li>
+      <li class="page-item" v-if="meta.last_page > meta.current_page">
+        <a class="page-link" href="#" @click.prevent="changePage(meta.current_page + 1)">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </li>
+      <li class="page-item" v-if="(meta.last_page - meta.current_page) > 1">
+        <a class="page-link" href="#" @click.prevent="changePage(meta.last_page)">
+          <i class="fas fa-chevron-right"></i>
+          <i class="fas fa-chevron-right"></i>
+        </a>
       </li>
     </ul>
   </nav>
@@ -20,7 +42,7 @@ export default {
     },
     offset: {
       type: Number,
-      default: 2,
+      default: 1,
     },
   },
   computed: {

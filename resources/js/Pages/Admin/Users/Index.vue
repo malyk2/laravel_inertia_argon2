@@ -103,10 +103,6 @@ export default {
       current_page: 1,
     };
   },
-  created() {
-    console.log("created");
-    console.log(this.users);
-  },
   methods: {
     getUsers(page) {
       if (page > 0 && page != this.users.meta.current_page) {
