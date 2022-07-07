@@ -2,38 +2,38 @@
   <div class="py-4 container-fluid">
     <div class="card">
       <div class="card-header pb-0">
-        <h6>Users</h6>
+        <div class="d-flex align-items-center">
+          <h6>Users</h6>
+          <Link class="btn mb-0 btn-success btn-sm null null ms-auto" href="/admin/users/create" v-bind="$attrs">
+          Create
+          </Link>
+        </div>
       </div>
+
       <div class="card-body px-0 pt-0 pb-2">
         <div class="table-responsive p-0">
           <table class="table align-items-center mb-0">
             <thead>
               <tr>
-                <th
-                  class="
+                <th class="
                     text-uppercase text-secondary text-xxs
                     font-weight-bolder
                     opacity-7
-                  "
-                >
+                  ">
                   Name
                 </th>
-                <th
-                  class="
+                <th class="
                     text-uppercase text-secondary text-xxs
                     font-weight-bolder
                     opacity-7
-                  "
-                >
+                  ">
                   Email
                 </th>
-                <th
-                  class="
+                <th class="
                     text-uppercase text-secondary text-xxs
                     font-weight-bolder
                     opacity-7
-                  "
-                >
+                  ">
                   Created
                 </th>
                 <th></th>
@@ -43,27 +43,21 @@
               <tr v-for="user in users.data" :key="user.id">
                 <td class="align-middle px-4">
                   <span class="text-secondary text-xs font-weight-bold">{{
-                    user.name
+                      user.name
                   }}</span>
                 </td>
                 <td class="align-middle px-4">
                   <span class="text-secondary text-xs font-weight-bold">{{
-                    user.email
+                      user.email
                   }}</span>
                 </td>
                 <td class="align-middle px-4">
                   <span class="text-secondary text-xs font-weight-bold">{{
-                    user.created_at
+                      user.created_at
                   }}</span>
                 </td>
                 <td class="align-middle px-4">
-                  <a
-                    href="javascript:;"
-                    class="text-secondary font-weight-bold text-xs"
-                    data-toggle="tooltip"
-                    data-original-title="Edit user"
-                    >Edit</a
-                  >
+                  <a :href="user.edit_link" class="text-secondary font-weight-bold text-xs">Edit</a>
                 </td>
               </tr>
             </tbody>
@@ -80,17 +74,15 @@
 </template>
 
 <script>
-import AuthorsTable from "@/Views/Examples/Admin/AuthorsTable.vue";
-import ProjectsTable from "@/Views/Examples/Admin/ProjectsTable.vue";
 import Panel from "@/Layouts/Admin/Panel.vue";
 import PaginatorAdmin from "@/Components/Admin/Paginators/PaginatorAdmin.vue";
+import { Link } from '@inertiajs/inertia-vue3'
 export default {
   name: "PagesAdminUsersIndex",
   layout: Panel,
   components: {
-    AuthorsTable,
-    ProjectsTable,
     PaginatorAdmin,
+    Link,
   },
   props: {
     users: {

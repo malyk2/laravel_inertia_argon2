@@ -4,7 +4,7 @@ namespace App\Http\Resources\Admin\Users;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ListItem extends JsonResource
+class DetailItem extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -19,8 +19,6 @@ class ListItem extends JsonResource
             'name' => $this->name,
             'email' => $this->email,
             'created_at' => $this->created_at->format('d/m/y'),
-            //
-            'edit_link' => route('users.show', ['user' => $this->id])
         ];
     }
 }

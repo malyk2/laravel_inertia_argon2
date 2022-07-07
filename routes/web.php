@@ -26,6 +26,10 @@ Route::prefix('admin')->group(function () {
         Route::post('logout', [AuthController::class, 'logout'])->name('logout');
         Route::prefix('users')->group(function () {
             Route::get('', [UserController::class, 'index'])->name('users.index');
+            Route::post('', [UserController::class, 'create'])->name('users.create');
+            Route::get('create', [UserController::class, 'createForm'])->name('users.create.form');
+            Route::get('{user}', [UserController::class, 'show'])->name('users.show');
+            Route::put('{user}', [UserController::class, 'update'])->name('users.update');
         });
         Route::prefix('example')->group(function () {
             Route::get('dashboard', [ExampleController::class, 'dashboard'])->name('examples.dashboard');

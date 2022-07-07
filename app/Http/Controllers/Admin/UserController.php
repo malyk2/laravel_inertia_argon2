@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Services\UserService;
 use App\Http\Resources\Admin\Users\ListItem as ListItemResource;
+use App\Http\Resources\Admin\Users\DetailItem as DetailItemResource;
+use App\Http\Requests\Admin\Users\Create as CreateRequest;
+use App\Http\Requests\Admin\Users\Update as UpdateRequest;
 
 class UserController extends Controller
 {
@@ -26,5 +29,31 @@ class UserController extends Controller
         return inertia('Admin/Users/Index', [
             'users' => ListItemResource::collection($users),
         ]);
+    }
+
+    public function createForm(Request $request)
+    {
+        return inertia('Admin/Users/Form', ['user' => null,]);
+    }
+
+    public function create(CreateRequest $request)
+    {
+        $this->userService->create($request->validated());
+
+        return redirect()->route('users.index');
+    }
+
+    public function show(User $user, Request $request)
+    {
+        return inertia('Admin/Users/Form', [
+            'user' => new DetailItemResource($user),
+        ]);
+    }
+
+    public function update(User $user, UpdateRequest $request)
+    {
+        $this->userService->update($user, $request->validated());
+
+        return redirect()->route('users.index');
     }
 }
