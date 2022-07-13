@@ -15,4 +15,12 @@ class AuthControllerTest extends TestCase
         $response->assertInertia(fn (Assert $page) => $page->component('Admin/Auth/Login'));
         $response->assertStatus(200);
     }
+
+    public function test_see_register_page()
+    {
+        $response = $this->get(route('register.form'));
+
+        $response->assertInertia(fn (Assert $page) => $page->component('Admin/Auth/Register'));
+        $response->assertStatus(200);
+    }
 }
