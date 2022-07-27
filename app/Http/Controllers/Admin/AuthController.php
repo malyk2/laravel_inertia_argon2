@@ -7,18 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Admin\Auth\Login as LoginRequest;
 use App\Http\Requests\Admin\Auth\Register as RegisterRequest;
 use App\Models\User;
-use App\Services\AuthService;
 use Illuminate\Support\Arr;
 
 class AuthController extends Controller
 {
-    protected $authService;
-
-    public function __construct(AuthService $authService)
-    {
-        $this->authService = $authService;
-    }
-
     public function loginForm(Request $request)
     {
         return inertia('Admin/Auth/Login');

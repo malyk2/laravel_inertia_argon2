@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ExampleController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,13 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function () {
     Route::middleware('auth')->group(function () {
         Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+        Route::prefix('users')->group(function () {
+            Route::get('', [UserController::class, 'index'])->name('users.index');
+            Route::post('', [UserController::class, 'create'])->name('users.create');
+            Route::get('create', [UserController::class, 'createForm'])->name('users.create.form');
+            Route::get('{user}', [UserController::class, 'show'])->name('users.show');
+            Route::put('{user}', [UserController::class, 'update'])->name('users.update');
+        });
         Route::prefix('example')->group(function () {
             Route::get('dashboard', [ExampleController::class, 'dashboard'])->name('examples.dashboard');
             Route::get('tables', [ExampleController::class, 'tables'])->name('examples.tables');
@@ -36,7 +44,7 @@ Route::prefix('admin')->group(function () {
     });
     // Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('login', [AuthController::class, 'loginForm'])->name('login');
-    Route::post('login', [AuthController::class, 'login']);
+    Route::post('login', [AuthController::class, 'login'])->name('login.submit');
     Route::get('register', [AuthController::class, 'registerForm'])->name('register.form');
-    Route::post('register', [AuthController::class, 'register']);
+    Route::post('register', [AuthController::class, 'register'])->name('register.submit');
 });
